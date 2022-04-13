@@ -1,0 +1,1 @@
+[solved.ac 티어 알려주는 거](https://github.com/mazassumnida/mazassumnida)에서 영감을 받아 맨든 solved.ac 문제 티어 알려주는 거

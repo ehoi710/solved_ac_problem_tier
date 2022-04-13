@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="170">
+	<style type="text/css">
+		<![CDATA[
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=block');
+			.background { fill: url(#grad); }
+			.title {
+				font-weight: 700;
+				font-size: 1.5em;
+			}
+			.tier-text {
+				font-weight: 500;
+				font-size: 1em;
+			}
+			.tier-number {
+				font-weight: 700;
+				font-size: 3.5em;
+			}
+			.sub-title {
+				font-weight: 400;
+				font-size: 0.9em;
+			}
+			.value {
+				font-weight: 300;
+				font-size: 0.9em;
+			}
+			.prob-id {
+				font-weight: 300;
+				font-size: 0.7em;
+				opacity: 40%%;
+			}
+			text {
+				fill: white;
+				font-family: 'Noto Sans KR', sans-serif;
+			}
+			animate {
+				fill: "freeze";
+				calcMode: "spline";
+				keySplines: "0 0 1 1; 0.5 0 0.5 1";
+			}
+		]]>
+	</style>
+	<defs>
+		<linearGradient id="grad" x1="0%%" y1="0%%" x2="100%%" y2="35%%">
+			<stop offset="10%%" style="stop-color:%(color0)s;stop-opacity:1"/>
+			<stop offset="55%%" style="stop-color:%(color1)s;stop-opacity:1"/>
+			<stop offset="100%%" style="stop-color:%(color2)s;stop-opacity:1"/>
+		</linearGradient>
+	</defs>
+	<rect width="350" height="170" rx="10" ry="10" class="background"></rect>
+	<text x="310" y="20" class="prob-id" text-anchor="end">%(id)d</text>
+	<text x="20" y="50" class="title">%(title)s</text>
+
+	<g class="item">
+		<text x="275" y="70" class="tier-text" text-anchor="middle">%(tier)s</text>
+		<text x="275" y="125" class="tier-number" text-anchor="middle">%(level)d</text>
+	</g>
+
+	<g class="item">
+		<text x="105" y="90" class="sub-title" text-anchor="end">시간 제한</text>
+		<text x="125" y="90" class="value">??? s</text>
+	</g>
+	<g class="item">
+		<text x="105" y="110" class="sub-title" text-anchor="end">메모리 제한</text>
+		<text x="125" y="110" class="value">??? MB</text>
+	</g>
+
+    <line x1="245" y1="75" x2="245" y2="130" stroke-width="2" stroke="white">
+		<animate attributeName="y2" dur="0.8s" keyTimes="0; 0.675; 1" values="75; 75; 130"/>
+	</line>
+	
+	<line x1="245" y1="130" x2="275" y2="145" stroke-width="2" stroke="white">
+		<animate attributeName="x2" dur="1s" keyTimes="0; 0.8; 1" values="245; 245; 275"/>
+		<animate attributeName="y2" dur="1s" keyTimes="0; 0.8; 1" values="130; 130; 145"/>
+	</line>
+	
+	<line x1="275" y1="145" x2="305" y2="130" stroke-width="2" stroke="white">
+		<animate attributeName="x2" dur="1.2s" keyTimes="0; 0.83333; 1" values="275; 275; 305"/>
+		<animate attributeName="y2" dur="1.2s" keyTimes="0; 0.83333; 1" values="145; 145; 130"/>
+	</line>
+	
+	<line x1="305" y1="130" x2="305" y2="75" stroke-width="2" stroke="white">
+		<animate attributeName="y2" dur="1.5s" keyTimes="0; 0.82666; 1" values="130; 130; 75"/>
+	</line>
+	
+	<line x1="275" y1="150" x2="245" y2="135" stroke-width="2" stroke="white">
+		<animate attributeName="x2" dur="1.7s" keyTimes="0; 0.88235; 1" values="275; 275; 245"/>
+		<animate attributeName="y2" dur="1.7s" keyTimes="0; 0.88235; 1" values="150; 150; 135"/>
+	</line>
+	<line x1="275" y1="150" x2="305" y2="135" stroke-width="2" stroke="white">
+		<animate attributeName="x2" dur="1.7s" keyTimes="0; 0.88235; 1" values="275; 275; 305"/>
+		<animate attributeName="y2" dur="1.7s" keyTimes="0; 0.88235; 1" values="150; 150; 135"/>
+	</line>
+</svg>
